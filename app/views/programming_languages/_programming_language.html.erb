@@ -1,17 +1,19 @@
-<div id="<%= dom_id programming_language %>">
-  <p>
-    <strong>Title:</strong>
-    <%= programming_language.title %>
+<div id="<%= dom_id(programming_language) %>" class="bg-white p-6 border border-gray-200 rounded-lg shadow-md mb-6">
+  <p class="mb-4">
+    <strong class="font-semibold text-gray-700">Title:</strong>
+    <span class="text-gray-900"><%= programming_language.title %></span>
+  </p>
+
+  <p class="mb-4">
+    <strong class="font-semibold text-gray-700">Description:</strong>
+    <span class="text-gray-900"><%= programming_language.description %></span>
   </p>
 
   <p>
-    <strong>Description:</strong>
-    <%= programming_language.description %>
+    <strong class="font-semibold text-gray-700">Link:</strong>
+    <a href="<%= programming_language.link %>" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+      <%= programming_language.link %>
+    </a>
   </p>
-
-  <p>
-    <strong>Link:</strong>
-    <%= programming_language.link %>
-  </p>
-
 </div>
+
